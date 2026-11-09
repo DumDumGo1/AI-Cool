@@ -1,27 +1,341 @@
-01
- Klicke fünfmal auf das Logo.
 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Welten über den Wolken</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <div class="sky-particles" id="particles"></div>
+  <div class="cloud cloud-one">☁</div>
+  <div class="cloud cloud-two">☁</div>
+  <div class="cloud cloud-three">☁</div>
 
-02
- Klicke auf den Mond oben rechts.
+  <!-- STARTBILDSCHIRM -->
+  <div class="welcome" id="welcome">
+    <div class="welcome-stars">✦　✧　✦</div>
+    <p class="welcome-label">EIN ATLAS AUS EINEM ANDEREN UNIVERSUM</p>
+    <h1>Die Welten<br><span>über den Wolken</span></h1>
+    <p class="welcome-text">Irgendwo zwischen Himmel und Fantasie<br>liegt ein Ort, den noch niemand vollständig entdeckt hat.</p>
+    <div class="welcome-island">🏝️</div>
+    <button class="start-button" id="startButton">ENTDECKUNG BEGINNEN ✨</button>
+    <p class="welcome-foot">KARTE NR. 001 · SEIT EWIGKEITEN VERSCHOLLEN</p>
+  </div>
 
+  <main id="main" class="hidden">
 
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <a class="logo" href="#start">☁️ <span>HIMMELSATLAS</span></a>
+      <div class="nav-links">
+        <a href="#karte">Karte</a>
+        <a href="#inseln">Inseln</a>
+        <a href="#lexikon">Lexikon</a>
+        <a href="#erschaffen">Eigene Insel</a>
+      </div>
+      <button class="nav-star" id="starButton">✦ <span id="starCount">0</span></button>
+    </nav>
 
-03
- Klicke auf die grosse Blume im Feature-Bereich.
+    <!-- HERO -->
+    <section class="hero" id="start">
+      <div class="hero-text">
+        <div class="little-label"><span class="pulse"></span> DAS HIMMELREICH IST GEÖFFNET</div>
+        <h2>Ein Himmel.<br><span>Unendlich viele</span><br>Welten.</h2>
+        <p>Schwebe von Insel zu Insel, entdecke seltsame Wesen und finde Orte, die in keinem gewöhnlichen Atlas stehen.</p>
+        <a href="#karte" class="hero-button">ZUR HIMMELSKARTE <span>↗</span></a>
+        <div class="hero-facts">
+          <div><strong>07</strong><small>ENTDECKTE INSELN</small></div>
+          <div><strong>∞</strong><small>MÖGLICHKEITEN</small></div>
+          <div><strong>01</strong><small>DU BIST HIER</small></div>
+        </div>
+      </div>
 
+      <div class="hero-art">
+        <div class="sun">☀️</div>
+        <div class="rainbow">🌈</div>
+        <div class="hero-cloud cloud-a">☁️</div>
+        <div class="hero-cloud cloud-b">☁️</div>
+        <div class="hero-island">
+          <div class="island-tree">🌳</div>
+          <div class="island-house">🏡</div>
+          <div class="island-flower">🌼</div>
+          <div class="island-rock">🪨</div>
+          <div class="island-base"></div>
+          <div class="island-waterfall">💧</div>
+        </div>
+        <div class="tiny-bird">🐦</div>
+        <div class="hero-caption">DIE ERSTE ENTDECKUNG</div>
+      </div>
+      <div class="hero-bottom-note">SCROLLE, UM WEITERZUSCHWEBEN ↓</div>
+    </section>
 
+    <!-- HIMMELSKARTE -->
+    <section class="map-section" id="karte">
+      <div class="section-intro">
+        <span class="section-tag">KAPITEL 01 · ORIENTIERUNG</span>
+        <h2>Die grosse <span>Himmelskarte</span></h2>
+        <p>Jede Insel hat ihre eigene Schwerkraft. Und ihre eigenen Regeln.</p>
+      </div>
 
-04
- Klicke auf das Sternsymbol ganz unten.
+      <div class="map-board">
+        <div class="map-sun">☀</div>
+        <div class="map-cloud map-cloud-1">☁</div>
+        <div class="map-cloud map-cloud-2">☁</div>
+        <div class="map-cloud map-cloud-3">☁</div>
+        <div class="map-line line-one"></div>
+        <div class="map-line line-two"></div>
+        <div class="map-line line-three"></div>
 
+        <button class="map-island island-1" data-island="blumen">
+          <span>🌸</span><small>BLÜTENBUCHT</small>
+        </button>
+        <button class="map-island island-2" data-island="regenbogen">
+          <span>🌈</span><small>REGENBOGENREICH</small>
+        </button>
+        <button class="map-island island-3" data-island="kristall">
+          <span>💎</span><small>KRISTALLKAMM</small>
+        </button>
+        <button class="map-island island-4" data-island="nacht">
+          <span>🌙</span><small>MONDSCHLAF</small>
+        </button>
+        <button class="map-island island-5" data-island="pilz">
+          <span>🍄</span><small>PILZWALD</small>
+        </button>
+        <button class="map-island island-6" data-island="meer">
+          <span>🐚</span><small>WOLKENMEER</small>
+        </button>
+        <button class="map-island island-7" data-island="geheim">
+          <span>❔</span><small>UNBEKANNT</small>
+        </button>
 
+        <div class="map-label">NORDÖSTLICHER HIMMEL · SEKTOR 7</div>
+      </div>
+      <p class="map-hint">✦ Klicke auf eine Insel, um sie zu besuchen.</p>
+    </section>
 
-05
- Doppelklicke auf die Pflanze im Titelbild.
+    <!-- INSELN -->
+    <section class="islands-section" id="inseln">
+      <div class="section-intro">
+        <span class="section-tag">KAPITEL 02 · REISEZIELE</span>
+        <h2>Sieben Inseln.<br><span>Sieben Wunder.</span></h2>
+        <p>Keine gleicht der anderen. Welche wirst du zuerst besuchen?</p>
+      </div>
 
+      <div class="island-grid">
+        <article class="island-card flower-card">
+          <div class="card-art">🌷🌼🌺</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 01</span>
+            <h3>Blütenbucht</h3>
+            <p>Hier wachsen Blumen so gross wie Häuser. Schmetterlinge tragen winzige Postkarten durch die Luft.</p>
+            <div class="card-meta">🌸 BLÜTEN · 🌤️ FRÜHLING</div>
+            <button data-island="blumen">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
 
+        <article class="island-card rainbow-card">
+          <div class="card-art">🌈🦋☁️</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 02</span>
+            <h3>Regenbogenreich</h3>
+            <p>Die Flüsse bestehen aus flüssigen Farben. Hier wird sogar der Himmel bunt, wenn jemand niest.</p>
+            <div class="card-meta">🌈 FARBEN · 🎨 KREATIVITÄT</div>
+            <button data-island="regenbogen">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
 
-06
- Öffne die Browser-Konsole mit F12.
+        <article class="island-card crystal-card">
+          <div class="card-art">💎🔮✨</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 03</span>
+            <h3>Kristallkamm</h3>
+            <p>Leuchtende Kristallberge speichern Geschichten. Manche Steine können sogar singen.</p>
+            <div class="card-meta">💎 KRISTALLE · 🔮 MAGIE</div>
+            <button data-island="kristall">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
+
+        <article class="island-card moon-card">
+          <div class="card-art">🌙⭐🪐</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 04</span>
+            <h3>Mondschlaf</h3>
+            <p>Eine Insel in ewiger Dämmerung. Die Sterne hängen hier so tief, dass man sie pflücken kann.</p>
+            <div class="card-meta">🌙 STERNE · 🌌 NACHT</div>
+            <button data-island="nacht">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
+
+        <article class="island-card mushroom-card">
+          <div class="card-art">🍄🌿🧚</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 05</span>
+            <h3>Der Pilzwald</h3>
+            <p>Riesige Pilze bilden ganze Städte. Die kleinen Bewohner wohnen in den Stielen.</p>
+            <div class="card-meta">🍄 NATUR · 🧚 WESEN</div>
+            <button data-island="pilz">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
+
+        <article class="island-card ocean-card">
+          <div class="card-art">🐚🐳🫧</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 06</span>
+            <h3>Wolkenmeer</h3>
+            <p>Hier schwimmen Wale durch Wolken. Muscheln erzählen Geschichten von fernen Himmeln.</p>
+            <div class="card-meta">🐳 WASSER · 🫧 WOLKEN</div>
+            <button data-island="meer">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
+
+        <article class="island-card mystery-card">
+          <div class="card-art">❔🔐🗝️</div>
+          <div class="card-content">
+            <span class="island-number">INSEL 07</span>
+            <h3>Die Unbekannte</h3>
+            <p>Niemand weiss, was sich dort befindet. Vielleicht bist du die erste Person, die es herausfindet.</p>
+            <div class="card-meta">❔ GEHEIMNIS · 🔐 RÄTSEL</div>
+            <button data-island="geheim">INSEL BESUCHEN ↗</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEXIKON -->
+    <section class="lexicon-section" id="lexikon">
+      <div class="section-intro">
+        <span class="section-tag">KAPITEL 03 · NATURKUNDE</span>
+        <h2>Das grosse <span>Himmelslexikon</span></h2>
+        <p>Die Bewohner und Pflanzen der schwebenden Welten.</p>
+      </div>
+
+      <div class="lexicon-tabs">
+        <button class="active" data-category="wesen">Wesen</button>
+        <button data-category="pflanzen">Pflanzen</button>
+        <button data-category="orte">Besondere Orte</button>
+      </div>
+
+      <div class="lexicon-display" id="lexiconDisplay">
+        <div class="lexicon-emoji">🦊</div>
+        <div>
+          <span class="lexicon-label">HIMMELSWESEN Nº 001</span>
+          <h3>Der Wolkenfuchs</h3>
+          <p>Ein flauschiger Bewohner des Wolkenmeeres. Sein Fell verändert seine Farbe je nach Wetter. Er sammelt verlorene Träume in seinem buschigen Schwanz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINI GAME -->
+    <section class="game-section" id="spiel">
+      <div class="game-intro">
+        <span class="section-tag">KAPITEL 04 · HIMMELSSPIEL</span>
+        <h2>Fange die <span>Wolken!</span></h2>
+        <p>Die kleinen Wolken sind ausgebüxt. Tippe sie an, bevor sie verschwinden!</p>
+      </div>
+
+      <div class="cloud-game">
+        <div class="game-top">
+          <span>DEINE PUNKTE: <strong id="gameScore">0</strong></span>
+          <span>ZEIT: <strong id="gameTime">20</strong></span>
+        </div>
+        <div class="game-area" id="gameArea">
+          <div class="game-message" id="gameMessage">
+            <span>☁️</span>
+            <p>Bereit zum Wolkenfangen?</p>
+            <button id="gameStart">LOS GEHT'S!</button>
+          </div>
+        </div>
+        <p class="game-bottom">Jede gefangene Wolke bringt einen Punkt. Viel Glück! ☁️</p>
+      </div>
+    </section>
+
+    <!-- EIGENE INSEL -->
+    <section class="create-section" id="erschaffen">
+      <div class="section-intro">
+        <span class="section-tag">KAPITEL 05 · DEINE FANTASIE</span>
+        <h2>Baue deine <span>eigene Insel.</span></h2>
+        <p>Du bist jetzt die Architektin einer neuen Himmelswelt.</p>
+      </div>
+
+      <div class="creator">
+        <div class="creator-preview" id="islandPreview">
+          <div class="preview-sun">☀️</div>
+          <div class="preview-cloud">☁️</div>
+          <div class="preview-items" id="previewItems">🌳 🏡 🌷</div>
+          <div class="preview-ground">🏝️</div>
+          <div class="preview-name" id="previewName">Wolkenheim</div>
+        </div>
+
+        <div class="creator-controls">
+          <label for="islandName">NAME DEINER INSEL</label>
+          <input id="islandName" maxlength="22" placeholder="z. B. Sternenwiese">
+
+          <label>WÄHLE EIN KLIMA</label>
+          <div class="choice-row" id="climateChoices">
+            <button class="choice selected" data-climate="sunny">☀️ Sonnig</button>
+            <button class="choice" data-climate="rainbow">🌈 Bunt</button>
+            <button class="choice" data-climate="night">🌙 Nächtlich</button>
+          </div>
+
+          <label>WÄHLE EINEN BEWOHNER</label>
+          <div class="choice-row" id="creatureChoices">
+            <button class="choice selected" data-creature="🦊">🦊</button>
+            <button class="choice" data-creature="🧚">🧚</button>
+            <button class="choice" data-creature="🐉">🐉</button>
+            <button class="choice" data-creature="🐰">🐰</button>
+            <button class="choice" data-creature="🐳">🐳</button>
+          </div>
+
+          <label>WÄHLE EINE BESONDERHEIT</label>
+          <div class="choice-row" id="featureChoices">
+            <button class="choice selected" data-feature="🌳 🏡 🌷">🌳 Garten</button>
+            <button class="choice" data-feature="💎 🔮 ✨">💎 Kristalle</button>
+            <button class="choice" data-feature="🍄 🌿 🧚">🍄 Pilzwald</button>
+            <button class="choice" data-feature="🏰 🎠 🎈">🏰 Schloss</button>
+          </div>
+
+          <button class="create-button" id="createIsland">MEINE INSEL ERSCHAFFEN ✨</button>
+          <p class="creator-result" id="creatorResult">Deine Welt wartet auf dich.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABSCHLUSS -->
+    <footer>
+      <div class="footer-clouds">☁️　☁️　☁️</div>
+      <h2>Das Ende?</h2>
+      <p>In diesen Welten gibt es kein Ende. Nur neue Entdeckungen.</p>
+      <button id="surpriseButton">ÜBERRASCH MICH! ✨</button>
+      <div class="footer-bottom">HIMMELSATLAS · AUSGABE 001 · MIT EIN BISSCHEN MAGIE GEMACHT</div>
+      <span class="tiny-secret" id="tinySecret">·</span>
+    </footer>
+
+  </main>
+
+  <!-- INSEL-FENSTER -->
+  <div class="island-modal" id="islandModal">
+    <div class="island-modal-box">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-picture" id="modalPicture">🌸</div>
+      <span class="section-tag" id="modalNumber">INSEL 01</span>
+      <h2 id="modalTitle">Blütenbucht</h2>
+      <p id="modalDescription"></p>
+      <div class="modal-fact" id="modalFact"></div>
+      <button class="modal-visit" id="modalDone">ZURÜCK ZUM HIMMEL ✦</button>
+    </div>
+  </div>
+
+  <!-- GEHEIMNIS-POPUP -->
+  <div class="toast" id="toast">
+    <span id="toastTitle">MAGISCHE ENTDECKUNG</span>
+    <p id="toastText"></p>
+    <button id="toastClose">WUNDERBAR ✨</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
